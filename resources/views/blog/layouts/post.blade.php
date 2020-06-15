@@ -72,6 +72,7 @@
             </div>
         </div>
     </div>
+@stop
 
 @section('comments')
     <hr>
@@ -83,34 +84,3 @@
         </div>
     </div>
 @stop
-
-<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
-<div id="gpt-passback">
-  <script>
-    window.googletag = window.googletag || {cmd: []};
-    googletag.cmd.push(function() {
-    googletag.defineSlot('/6105061/miller_covid_32050', [320, 50], 'gpt-passback').addService(googletag.pubads());
-    googletag.enableServices();
-    googletag.display('gpt-passback');
-    });
-  </script>
-</div>
-
-<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
-<script>
-  window.googletag = window.googletag || {cmd: []};
-  googletag.cmd.push(function() {
-    googletag.defineSlot('/6105061/miller_covid_32050', [320, 50], 'gpt-passback').addService(googletag.pubads());
-    googletag.pubads().enableSingleRequest();
-    googletag.enableServices();
-  });
-</script>
-
-<!-- /6105061/miller_covid_32050 -->
-<div id='gpt-passback' style='width: 320px; height: 50px;'>
-    <script>
-      googletag.cmd.push(function() { 
-          googletag.display('gpt-passback'); 
-          });
-    </script>
-</div>
