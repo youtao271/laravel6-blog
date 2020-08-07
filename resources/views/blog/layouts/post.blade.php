@@ -4,7 +4,7 @@
 ])
 
 @section('page-header')
-    <header class="masthead" style="background-image: url('{{ page_image($post->page_image) }}')">
+    <header class="masthead" style="background-image: url('http://www.9dutv.com/bing/{{ $post->post }}')">
         <div class="overlay"></div>
         <div class="container">
             <div class="row">

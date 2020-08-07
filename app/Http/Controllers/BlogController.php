@@ -24,7 +24,10 @@ class BlogController extends Controller
 
     public function showPost($slug, Request $request)
     {
+        $randomTime = rand(strtotime('20200801'), time());
+        $imgName = date('Ymd', $randomTime) . '.png';
         $post = Post::with('tags')->where('slug', $slug)->firstOrFail();
+        $post->post = $imgName;
         $tag = $request->get('tag');
         if ($tag) {
             $tag = Tag::where('tag', $tag)->firstOrFail();
