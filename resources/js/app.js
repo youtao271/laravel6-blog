@@ -21,6 +21,8 @@ window.Vue = require('vue');
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('welcome-component', require('./components/WelcomeComponent.vue').default);
+Vue.component('postListItem', require('./components/PostListItem.vue').default);
+Vue.component('postList', require('./components/PostList.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
+use App\Http\Controllers\Controller;
 use App\Models\Post;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -12,24 +13,26 @@ use App\Services\SiteMap;
 
 class BlogController extends Controller
 {
-    public function index(Request $request)
+    public function index($page=1, Request $request)
     {
         $tag = $request->get('tag');
-        $page = $request->get('page');
         $postService = new PostService($page, $tag);
-        $data = $postService->lists();
-        $layout = $tag ? Tag::layout($tag) : 'blog.layouts.index';
-        return view($layout, $data);
+        $data = $postService->postLists();
+        //var_dump($data);exit;
+        //$layout = $tag ? Tag::layout($tag) : 'blog.layouts.index';
+        //return view($layout, $data);
+        return $data;
     }
 
-    public function showPost($slug, Request $request)
+    public function post($slug, Request $request)
     {
         $post = Post::with('tags')->where('slug', $slug)->firstOrFail();
         $tag = $request->get('tag');
         if ($tag) {
             $tag = Tag::where('tag', $tag)->firstOrFail();
         }
-        return view($post->layout, compact('post', 'tag'));
+        //var_dump($post->toArray());exit;
+        return $post->toArray();
     }
 
     public function rss(RssFeed $feed)

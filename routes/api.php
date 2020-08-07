@@ -16,3 +16,9 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/posts/{page?}', 'Api\BlogController@index')->name('api.posts');
+Route::get('/post/{id}', 'Api\BlogController@post')->name('api.post');
+/* Route::get('/posts', function(){
+    return 123;
+}); */
