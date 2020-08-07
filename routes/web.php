@@ -19,7 +19,7 @@
 // Route::get('/blog/{slug}', 'BlogController@showPost')->name('blog.detail');
 
 Route::get('/', 'BlogController@index')->name('blog.home');
-Route::get('/{slug}', 'BlogController@showPost')->name('blog.detail');
+Route::get('/post/{slug}', 'BlogController@showPost')->name('blog.detail');
 
 // 后台路由
 Route::get('/admin', function () {
