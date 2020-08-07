@@ -1994,12 +1994,12 @@ __webpack_require__.r(__webpack_exports__);
   props: ["item"],
   computed: {
     getHref: function getHref() {
-      return '/blog/' + this.item.slug;
+      return '/post/' + this.item.slug;
     },
     joinTags: function joinTags() {
       var html = '';
       this.item.tags.forEach(function (tag) {
-        html += "<a href=\"/blog?tag=".concat(tag.tag, "\">").concat(tag.tag, "</a> ");
+        html += "<a href=\"/post?tag=".concat(tag.tag, "\">").concat(tag.tag, "</a> ");
       });
       return html;
     }

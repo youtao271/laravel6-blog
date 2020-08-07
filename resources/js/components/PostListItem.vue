@@ -26,12 +26,12 @@ export default {
   props: ["item"],
   computed: {
     getHref: function(){
-      return '/blog/'+this.item.slug
+      return '/post/'+this.item.slug
     },
     joinTags: function(){
       let html = ''
       this.item.tags.forEach(tag => {
-        html += `<a href="/blog?tag=${tag.tag}">${tag.tag}</a> `
+        html += `<a href="/post?tag=${tag.tag}">${tag.tag}</a> `
       });
       return html;
     }
