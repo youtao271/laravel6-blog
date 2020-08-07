@@ -40,7 +40,7 @@
                                 <a href="/admin/post/{{ $post->id }}/edit" class="btn btn-xs btn-info">
                                     <i class="fa fa-edit"></i> 编辑
                                 </a>
-                                <a href="/blog/{{ $post->slug }}" class="btn btn-xs btn-warning">
+                                <a href="/post/{{ $post->slug }}" class="btn btn-xs btn-warning">
                                     <i class="fa fa-eye"></i> 查看
                                 </a>
                             </td>

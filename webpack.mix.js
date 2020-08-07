@@ -26,6 +26,9 @@ mix.combine([
     'node_modules/pickadate/lib/compressed/themes/default.time.css',
 ], 'public/css/pickadate.min.css');
 
+mix.copy('node_modules/highlightjs/styles/atom-one-dark.css',
+    'public/css/highlight.css');
+
 mix.copy('node_modules/selectize/dist/js/standalone/selectize.min.js',
     'public/js/selectize.min.js');
 

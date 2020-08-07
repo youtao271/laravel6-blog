@@ -39,6 +39,11 @@ Vue.component('postList', require('./components/PostList.vue').default);
  * Copied from Clean Blog v1.0.0 (http://startbootstrap.com)
  */
 
+ window.hljs = require('highlightjs');
+ hljs.initHighlightingOnLoad();
+
+
+
 // Navigation Scripts to Show Header on Scroll-Up
 jQuery(document).ready(function ($) {
     var MQL = 1170;
