@@ -1,7 +1,6 @@
 @extends('admin.layout')
 
 @section('styles')
-    <link href="{{ asset('css/pickadate.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/selectize.default.css') }}" rel="stylesheet">
 @stop
 
@@ -92,19 +91,5 @@
 @stop
 
 @section('scripts')
-    <script src="{{ asset('js/pickadate.min.js') }}"></script>
     <script src="{{ asset('js/selectize.min.js') }}"></script>
-    <script>
-        $(function() {
-            $("#publish_date").pickadate({
-                format: "mmm-d-yyyy"
-            });
-            $("#publish_time").pickatime({
-                format: "h:i A"
-            });
-            $("#tags").selectize({
-                create: true
-            });
-        });
-    </script>
 @stop

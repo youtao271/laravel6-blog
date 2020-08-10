@@ -59,7 +59,7 @@
         </div>
     </div>
     <div class="col-md-4">
-        <div class="form-group row">
+        {{-- <div class="form-group row">
             <label for="publish_date" class="col-md-3 col-form-label">
                 发布日期
             </label>
@@ -74,7 +74,7 @@
             <div class="col-md-8">
                 <input class="form-control" name="publish_time" id="publish_time" type="text" value="{{ $publish_time }}">
             </div>
-        </div>
+        </div> --}}
         <div class="form-group row">
             <div class="col-md-8 col-md-offset-3">
                 <div class="checkbox">

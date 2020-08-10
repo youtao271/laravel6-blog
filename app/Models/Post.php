@@ -48,7 +48,7 @@ class Post extends Model
      */
     protected function setUniqueSlug($title, $extra)
     {
-        $slug = Str::slug($title . '-' . $extra);
+        $slug = Str::slug($title . $extra);
 
         if (static::where('slug', $slug)->exists()) {
             $this->setUniqueSlug($title, $extra + 1);

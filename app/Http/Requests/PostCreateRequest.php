@@ -26,8 +26,8 @@ class PostCreateRequest extends FormRequest
             'title' => 'required',
             'subtitle' => 'required',
             'content' => 'required',
-            'publish_date' => 'required',
-            'publish_time' => 'required',
+            //'publish_date' => 'required',
+            //'publish_time' => 'required',
             'layout' => 'required',
         ];
     }
@@ -38,7 +38,8 @@ class PostCreateRequest extends FormRequest
     public function postFillData()
     {
         $published_at = new Carbon(
-            $this->publish_date . ' ' . $this->publish_time
+            //$this->publish_date . ' ' . $this->publish_time
+            date('Y-m-d H:i:s')
         );
         return [
             'title' => $this->title,

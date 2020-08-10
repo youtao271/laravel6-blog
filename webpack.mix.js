@@ -20,11 +20,11 @@ mix.combine([
     'node_modules/selectize/dist/css/selectize.bootstrap3.css'
 ], 'public/css/selectize.default.css');
 
-mix.combine([
+/* mix.combine([
     'node_modules/pickadate/lib/compressed/themes/default.css',
     'node_modules/pickadate/lib/compressed/themes/default.date.css',
     'node_modules/pickadate/lib/compressed/themes/default.time.css',
-], 'public/css/pickadate.min.css');
+], 'public/css/pickadate.min.css'); */
 
 mix.copy('node_modules/highlightjs/styles/atom-one-dark.css',
     'public/css/highlight.css');
@@ -32,8 +32,8 @@ mix.copy('node_modules/highlightjs/styles/atom-one-dark.css',
 mix.copy('node_modules/selectize/dist/js/standalone/selectize.min.js',
     'public/js/selectize.min.js');
 
-mix.combine([
+/* mix.combine([
     'node_modules/pickadate/lib/compressed/picker.js',
     'node_modules/pickadate/lib/compressed/picker.date.js',
     'node_modules/pickadate/lib/compressed/picker.time.js'
-], 'public/js/pickadate.min.js');
+], 'public/js/pickadate.min.js'); */
